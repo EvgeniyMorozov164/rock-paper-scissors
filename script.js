@@ -1,4 +1,4 @@
-// Computer logic
+// Computer choice logic
 console.log("Hello World");
 const getComputerChoice = () => {
   const choices = ["rock", "paper", "scissors"];
@@ -7,3 +7,14 @@ const getComputerChoice = () => {
 }
 
 getComputerChoice();
+
+//Human choice
+
+const getHumanChoice = () => {
+  let choice = prompt("Rock, paper or scissors? Please enter: ");  
+  choice = choice.toLowerCase();
+  console.log(choice);
+  return choice;
+}
+
+getHumanChoice();
