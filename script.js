@@ -18,3 +18,9 @@ const getHumanChoice = () => {
 }
 
 getHumanChoice();
+
+// Score variables
+
+let humanScore = 0;
+let computerScore = 0;
+
