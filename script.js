@@ -41,6 +41,11 @@ const resetGame = () => {
   buttons.forEach((button) => {
      button.disabled = false;    
   });
+  if (gameResult.classList.contains("win")) {
+    gameResult.classList.remove("win");
+  } else {
+    gameResult.classList.remove("lose");
+  }
 }
 resetButton.addEventListener("click", resetGame);
 // Entire game logic
@@ -68,12 +73,16 @@ resetButton.addEventListener("click", resetGame);
     compScore.textContent = computerScore;
     roundWinner.textContent = roundResult;    
   } 
+
   let gameResult = document.querySelector(".result");
+
   const showResult = () => {
     if (humanScore === 5) {
-      gameResult.textContent = "You win!"
+      gameResult.textContent = "You win!";
+      gameResult.classList.add("win");
     } else if (computerScore === 5) {
-      gameResult.textContent = "Computer wins!"
+      gameResult.textContent = "Computer wins!";
+      gameResult.classList.add("lose");
     }
   }
   
